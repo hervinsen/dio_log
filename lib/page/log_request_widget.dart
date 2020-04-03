@@ -131,7 +131,7 @@ class _LogRequestWidgetState extends State<LogRequestWidget>
       formDataMap = Map()..addEntries(data.fields)..addEntries(data.files);
       return _getDefText('formdata:${map2Json(formDataMap)}');
     } else {
-      return SizedBox();
+      return _buildJsonView('body', data?.toString());
     }
   }
 
